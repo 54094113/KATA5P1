@@ -18,10 +18,16 @@ public class KATA5P1 {
         String query = "SELECT * FROM PEOPLE";
         ResultSet rs = st.executeQuery(query);
         
-        while (rs.next()){
+        /*while (rs.next()){
             System.out.println(rs.getInt(1));
             System.out.println(rs.getString(2));
             System.out.println(rs.getString(3));
-        }
+        }*/
+        
+        query = "CREATE TABLE IF NOT EXISTS MAIL('id' INTEGER"
+                + " PRIMARY KEY AUTOINCREMENT , 'Mail' TEXT NOT NULL);";
+        
+        st.execute(query);
+                
     }
 }
